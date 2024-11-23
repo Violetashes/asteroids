@@ -1,8 +1,8 @@
-import circleshape
+from circleshape import CircleShape
 import pygame
 from constants import PLAYER_TURN_SPEED, PLAYER_SPEED
 
-class Player(circleshape.CircleShape):
+class Player(CircleShape):
     def __init__(self, x, y, radius):
         super().__init__(x, y, radius)
         self.rotation = 0

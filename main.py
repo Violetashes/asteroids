@@ -35,7 +35,7 @@ def main():
 		for thing in asteroids:
 			for thing2 in shots:
 				if thing2.collision(thing):
-					pygame.sprite.Sprite.kill(thing)
+					thing.split()
 					pygame.sprite.Sprite.kill(thing2)
 			if thing.collision(actor):
 				print("Game Over!")

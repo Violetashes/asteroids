@@ -33,6 +33,10 @@ def main():
 		for thing in updatable:
 			thing.update(dt)
 		for thing in asteroids:
+			for thing2 in shots:
+				if thing2.collision(thing):
+					pygame.sprite.Sprite.kill(thing)
+					pygame.sprite.Sprite.kill(thing2)
 			if thing.collision(actor):
 				print("Game Over!")
 				sys.exit()
